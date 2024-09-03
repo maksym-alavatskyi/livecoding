@@ -1,29 +1,31 @@
-import { Module, ValidationPipe } from "@nestjs/common";
-import { AppController } from "./app.controller";
-import { TypeOrmModule } from "@nestjs/typeorm";
-import { AppService } from "./app.service";
-import { APP_PIPE } from "@nestjs/core";
-import { TodoListModule } from "../todo-list/todo-list.module";
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from '../users/users.module';
+import { ProductsModule } from '../products/products.module';
+import { OrdersModule } from '../orders/orders.module';
+import { User } from '../users/user.entity';
+import { Product } from '../products/product.entity';
+// import { AddressesModule } from '../address/addresses.module';
+import { Order } from '../orders/order.entity';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+// import { Address } from '../address/address.entity';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: "sqlite",
-      database: "db.sqlite",
-      entities: ["**/*.entity.js"],
+      type: 'sqlite',
+      database: 'ecommerce.db',
+      entities: [User, Product, Order, /*Address*/],
       synchronize: true,
     }),
-    TodoListModule,
+    UsersModule,
+    ProductsModule,
+    OrdersModule,
+  //  AddressesModule,
+
   ],
   controllers: [AppController],
-  providers: [
-    AppService,
-    {
-      provide: APP_PIPE,
-      useValue: new ValidationPipe({
-        whitelist: true,
-      }),
-    },
-  ],
+  providers: [AppService],
 })
 export class AppModule {}
