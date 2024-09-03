@@ -21,6 +21,6 @@ export class Address {
   @Column()
   country: string;
 
-  @OneToOne(() => User, (user) => user.address)
+  @Column()
   user: User;
 }

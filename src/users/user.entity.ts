@@ -1,4 +1,3 @@
-// import { Address } from '../address/address.entity';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
@@ -11,7 +10,4 @@ export class User {
 
   @Column()
   password: string;
-
-  // @Column()
-  // address: Address
 }
