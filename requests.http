@@ -1,0 +1,24 @@
+### Add item
+POST http://localhost:3000/todo-list/add
+Content-Type: application/json
+
+{
+  "name": "implement nest app"
+}
+
+### Test app
+GET http://localhost:3000
+
+### Get all items
+GET http://localhost:3000/todo-list
+
+### Update status
+PATCH http://localhost:3000/todo-list/update/1
+Content-Type: application/json
+
+{
+  "name": "Implement nest app with a better name"
+}
+
+### Delete item
+DELETE http://localhost:3000/todo-list/delete/1
