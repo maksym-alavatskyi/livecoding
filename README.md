@@ -66,4 +66,9 @@ We want you to carry out the following tasks:
 
 #### 3. Implement functionality to calculate `totalAmount` value automatically by fetching productIds prices and sum them up for endpoint `POST http://localhost:3000/orders/add`
 
+#### 3. Uncomment address endpoints and fix build errors
+
+- go to file `src/app/app.module.ts` and uncomment code on lines 8, 12, 19, 25
+- try to fix bugs appeared in app (note: there is 3 errors, appeared next after fixing previous)
+
 **Best of luck!**
