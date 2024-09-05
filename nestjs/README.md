@@ -40,7 +40,7 @@ You can use this simple API client to test your own endpoints, or use an alterna
 To run the backend application execute:
 
 ```
-npm run start:backend --watch
+npm run start
 ```
 
 Application is served on http://localhost:3000 and is a
@@ -50,25 +50,23 @@ nestjs application connected to sqlite database and contain these basic APIs:
 - DELETE request to remove order/user/product
 - GET request to get all orders/products
 
-Request examples could be found in file `requesst.http`
+Request examples could be found in file `requests.http`
 
 ## Backend task:
 
 While this API gives us the basic abilities to create, fetch, and delete items, it's far from sufficient for our app.
 
-IMPORTANT: Ensure that we have sufficient test coverage on the new additions added.
-
 We want you to carry out the following tasks:
 
-#### 1. Implement functionality to place orders only for authorized users with automatically added `userId` request body field for endpoint `POST http://localhost:3000/orders/add`
-
-#### 2. Implement functionality to fetch orders only placed by current user filtered by `userId` added automatically
-
-#### 3. Implement functionality to calculate `totalAmount` value automatically by fetching productIds prices and sum them up for endpoint `POST http://localhost:3000/orders/add`
-
-#### 3. Uncomment address endpoints and fix build errors
+#### 1. Uncomment address endpoints and fix build errors
 
 - go to file `src/app/app.module.ts` and uncomment code on lines 8, 12, 19, 25
 - try to fix bugs appeared in app (note: there is 3 errors, appeared next after fixing previous)
+
+#### 2. Implement functionality to place orders only for authorized users with automatically added `userId` request body field for endpoint `POST http://localhost:3000/orders/add`
+
+#### 3. Implement functionality to fetch orders only placed by current user filtered by `userId` added automatically
+
+#### 4. Implement functionality to calculate `totalAmount` value automatically by fetching productIds prices and sum them up for endpoint `POST http://localhost:3000/orders/add`
 
 **Best of luck!**

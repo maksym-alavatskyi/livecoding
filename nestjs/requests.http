@@ -52,4 +52,4 @@ Content-Type: application/json
 }
 
 ### Delete order
-DELETE http://localhost:3000/users/2
+DELETE http://localhost:3000/users/1
