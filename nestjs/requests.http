@@ -25,9 +25,9 @@ POST http://localhost:3000/orders/add
 Content-Type: application/json
 
 {
-  "userId": 1,
-  "productIds": [1,2],
-  "totalAmount": 1000
+  "userId": 2,
+  "productIds": [2,4],
+  "totalAmount": 3000
 }
 
 ### Delete order
