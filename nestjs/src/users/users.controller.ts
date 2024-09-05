@@ -1,4 +1,4 @@
-import { Controller, Post, Delete, Body, Param, UnauthorizedException } from '@nestjs/common';
+import { Controller, Post, Delete, Body, Param, UnauthorizedException, Get } from '@nestjs/common';
 import { UsersService } from './users.service';
 
 @Controller('users')
@@ -15,12 +15,9 @@ export class UsersController {
     return this.usersService.deleteUser(Number(id));
   }
 
-  @Post('login')
-  async login(@Body('username') username: string, @Body('password') password: string) {
-    const user = await this.usersService.findUserByUsername(username);
-    if (user && user.password === password) {
-      return { message: 'Login successful', user };
-    }
-    throw new UnauthorizedException('Invalid credentials');
+  @Get('me')  // Endpoint to get currently logged-in user
+  getLoggedInUser() {
+    const user = this.usersService.getLoggedInUser();
+    return user;
   }
 }

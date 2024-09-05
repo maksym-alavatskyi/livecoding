@@ -39,17 +39,11 @@ Content-Type: application/json
 
 {
   "username": "user1",
-  "password": "user1"
+  "password": "pass"
 }
 
-### Login user
-POST http://localhost:3000/users/login
-Content-Type: application/json
+### Get last registered user
+GET http://localhost:3000/users/me
 
-{
-  "username": "user1",
-  "password": "user1"
-}
-
-### Delete order
+### Delete user
 DELETE http://localhost:3000/users/1
