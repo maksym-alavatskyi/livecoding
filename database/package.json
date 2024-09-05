@@ -1,0 +1,14 @@
+{
+  "name": "database-optimization-test",
+  "version": "1.0.0",
+  "description": "Technical test for optimizing SQL queries in SQLite.",
+  "main": "index.js",
+  "dependencies": {
+    "sqlite3": "^5.1.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
