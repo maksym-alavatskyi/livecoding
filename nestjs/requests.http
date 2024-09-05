@@ -9,9 +9,9 @@ POST http://localhost:3000/products/add
 Content-Type: application/json
 
 {
-  "name": "Keyboard",
-  "price": 100,
-  "description": "Gamer keyboard"
+  "name": "Backpack",
+  "price": 300,
+  "description": "Gamer Backpack"
 }
 
 ### Delete product
@@ -38,8 +38,8 @@ POST http://localhost:3000/users/register
 Content-Type: application/json
 
 {
-  "username": "user1",
-  "password": "pass"
+  "username": "user2",
+  "password": "pass2"
 }
 
 ### Get last registered user
