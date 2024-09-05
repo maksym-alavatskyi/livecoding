@@ -17,29 +17,32 @@ Content-Type: application/json
 ### Delete product
 DELETE http://localhost:3000/products/1
 
-### Get all orders
-GET http://localhost:3000/orders
+### Delete order
+DELETE http://localhost:3000/orders/1
+
+############### REQUIRED FOR TASKS #####################
 
 ### Add order
 POST http://localhost:3000/orders/add
 Content-Type: application/json
 
 {
-  "userId": 2,
-  "productIds": [2,4],
-  "totalAmount": 3000
+  "productIds": [2,3],
+  "totalAmount": 100
 }
 
-### Delete order
-DELETE http://localhost:3000/orders/1
+
+### Get all orders
+GET http://localhost:3000/orders
+
 
 ### Register user
 POST http://localhost:3000/users/register
 Content-Type: application/json
 
 {
-  "username": "user2",
-  "password": "pass2"
+  "username": "user3",
+  "password": "pass3"
 }
 
 ### Get last registered user

@@ -65,8 +65,8 @@ We want you to carry out the following tasks:
 
 #### 2. Implement functionality to place orders only for authorized users with automatically added `userId` request body field for endpoint `POST http://localhost:3000/orders/add`
 
-#### 3. Implement functionality to fetch orders only placed by current user filtered by `userId` added automatically
+#### 3. Implement functionality to calculate `totalAmount` value automatically by fetching productIds prices and sum them up for endpoint `POST http://localhost:3000/orders/add`
 
-#### 4. Implement functionality to calculate `totalAmount` value automatically by fetching productIds prices and sum them up for endpoint `POST http://localhost:3000/orders/add`
+#### 4. Implement functionality to fetch orders only placed by current user filtered by `userId` added automatically
 
 **Best of luck!**
