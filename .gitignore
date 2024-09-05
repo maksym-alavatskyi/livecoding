@@ -1,5 +1,4 @@
 node_modules
-.Ds_Store
+.vscode
 dist
-ecommerce.db
-.vscode/
+.DS_Store
