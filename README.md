@@ -63,10 +63,41 @@ We want you to carry out the following tasks:
 - go to file `src/app/app.module.ts` and uncomment code on lines 8, 12, 19, 25
 - try to fix bugs appeared in app (note: there is 3 errors, appeared next after fixing previous)
 
-#### 2. Implement functionality to place orders only for authorized users with automatically added `userId` request body field for endpoint `POST http://localhost:3000/orders/add`
+#### 2. Implement functionality to place orders for registered user
 
-#### 3. Implement functionality to calculate `totalAmount` value automatically by fetching productIds prices and sum them up for endpoint `POST http://localhost:3000/orders/add`
+- on `POST http://localhost:3000/orders/add` instead of passing `userId` as a body parameter fetch user from `UserService`
+  read `userId` and add to order
+
+#### 3. Implement functionality to calculate `totalAmount` value
+
+- on `POST http://localhost:3000/orders/add` fetch products from `Product` repository, and instead of passing `totalAmount` as body paramter calculate product prices and sum them up
 
 #### 4. Implement functionality to fetch orders only placed by current user filtered by `userId` added automatically
+
+- on `GET http://localhost:3000/orders` fetch `userId` from `UserService` and filter orders by user
+
+## Database Query Optimization Task
+
+### Setup Instructions
+
+1. To provide you with a simple way to view the database, you can use the following extension:
+   [SQLite Viwer](https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer)
+2. Execute `node index.js` to run the suboptimal query against the SQLite database.
+3. Optimize the provided SQL query in the `index.js` file and explain your solution.
+
+### Task
+
+Your task is to optimize the SQL query provided in `index.js` to improve performance then run `node index.js` to see the result.
+
+- Consider techniques like indexing, query refactoring, or aggregation (Apply database change via `index.js` or directly in the database)
+- Provide a brief explanation of the optimizations you applied.
+
+_Hint: Use command `sqlite3 ecommerce.db` to open and connect to the `ecommerce.db` database._
+
+### Evaluation Criteria
+
+- Effectiveness of the optimizations.
+- Clarity in explaining the rationale behind the chosen methods.
+- Understanding of SQL and database performance considerations.
 
 **Best of luck!**

@@ -1,9 +1,14 @@
 import { Controller, Post, Delete, Get, Body, Param } from '@nestjs/common';
 import { OrdersService } from './orders.service';
+import { UsersService } from 'src/users/users.service';
+import { ProductsService } from 'src/products/products.service';
 
 @Controller('orders')
 export class OrdersController {
-  constructor(private readonly ordersService: OrdersService) {}
+  constructor(
+    private readonly ordersService: OrdersService, 
+    private readonly userService: UsersService, 
+    private readonly productService: ProductsService) {}
 
   @Post('add')
   addOrder(

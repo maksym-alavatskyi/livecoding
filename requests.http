@@ -20,6 +20,9 @@ DELETE http://localhost:3000/products/1
 ### Delete order
 DELETE http://localhost:3000/orders/1
 
+### Delete user
+DELETE http://localhost:3000/users/1
+
 ############### REQUIRED FOR TASKS #####################
 
 ### Add order
@@ -27,10 +30,10 @@ POST http://localhost:3000/orders/add
 Content-Type: application/json
 
 {
+  "userId": 1,
   "productIds": [2,3],
   "totalAmount": 100
 }
-
 
 ### Get all orders
 GET http://localhost:3000/orders
@@ -47,6 +50,3 @@ Content-Type: application/json
 
 ### Get last registered user
 GET http://localhost:3000/users/me
-
-### Delete user
-DELETE http://localhost:3000/users/1
