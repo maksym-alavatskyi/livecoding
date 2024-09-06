@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 
 // Connect to SQLite database
-const db = new sqlite3.Database('./test_db.sqlite', sqlite3.OPEN_READWRITE, (err) => {
+const db = new sqlite3.Database('./ecommerce.db', sqlite3.OPEN_READWRITE, (err) => {
   if (err) {
     console.error('Error connecting to the database:', err.message);
   } else {
@@ -10,7 +10,7 @@ const db = new sqlite3.Database('./test_db.sqlite', sqlite3.OPEN_READWRITE, (err
 });
 
 // Suboptimal query to be optimized by the candidate
-const suboptimalQuery = `SELECT u.id, u.username, o.id, o.totalAmount FROM users u LEFT JOIN orders o ON u.id = o.userId;`;
+const suboptimalQuery = `SELECT u.id, u.username, o.id, o.totalAmount FROM "user" u LEFT JOIN "order" o ON u.id = o.userId;`;
 
 // Execute the suboptimal query
 db.all(suboptimalQuery, [], (err, rows) => {

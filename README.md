@@ -69,4 +69,28 @@ We want you to carry out the following tasks:
 
 #### 4. Implement functionality to fetch orders only placed by current user filtered by `userId` added automatically
 
+# Database Query Optimization Task
+
+## Setup Instructions
+
+1. To provide you with a simple way to view the database, you can use the following extension:
+   [SQLite Viwer](https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer)
+2. Execute `node index.js` to run the suboptimal query against the SQLite database.
+3. Optimize the provided SQL query in the `index.js` file and explain your solution.
+
+## Task
+
+Your task is to optimize the SQL query provided in `index.js` to improve performance then run `node index.js` to see the result.
+
+- Consider techniques like indexing, query refactoring, or aggregation (Apply database change via `index.js` or directly in the database)
+- Provide a brief explanation of the optimizations you applied.
+
+_Hint: Use command `sqlite3 ecommerce.db` to open and connect to the `ecommerce.db` database._
+
+## Evaluation Criteria
+
+- Effectiveness of the optimizations.
+- Clarity in explaining the rationale behind the chosen methods.
+- Understanding of SQL and database performance considerations.
+
 **Best of luck!**
